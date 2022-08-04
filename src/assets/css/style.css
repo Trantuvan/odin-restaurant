@@ -1,0 +1,44 @@
+/**
+ * base styles and typography
+ * ---------------
+ */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+:root {
+  /* primary color */
+  --soft-red-clr: #fe7867;
+  --yellow-clr: #fad400;
+  --dark-cyan-txt: #25564b;
+  --dark-blue-clr: #19536b;
+  --dark-cyan-clr: #458c7e;
+
+  /* neutral color*/
+  --darker-blue-clr: #23303e;
+  --darker-gray-blue-clr: #5a636c;
+  --dark-gray-blue-clr: #a7abae;
+  --white-clr: #ffffff;
+}
+
+/*******************
+   Base styles
+   *******************/
+html {
+  font-size: 62.5%;
+  font-family: "Barlow", sans-serif;
+  /* font-family: 'Fraunces', serif; */
+  line-height: 1.4;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.8rem;
+  /* width: min(144rem, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+img {
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
