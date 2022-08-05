@@ -31,14 +31,34 @@ html {
 
 body {
   height: 100vh;
-  font-size: 1.8rem;
-  /* width: min(144rem, 100%);
   display: flex;
   justify-content: center;
-  align-items: center; */
 }
 
 img {
   aspect-ratio: 1/1;
   object-fit: contain;
+}
+
+.content {
+  width: min(144rem, 100%);
+}
+
+header {
+  background-color: var(--darker-blue-clr);
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 8em;
+}
+
+header > .header__nav {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+header .nav__link {
+  text-decoration: none;
+  color: var(--white-clr);
+  font-size: 2.4rem;
 }
