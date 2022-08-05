@@ -3,10 +3,11 @@ import "normalize.css";
 import "./assets/css/reset.css";
 import "./assets/css/style.css";
 import Favicon from "./assets/img/favicon.png";
-import Header from "./components/header";
 
 // Feature
-import changeFavicon from "./changeFavicon";
+import changeFavicon from "./util/changeFavicon";
+import Header from "./components/header";
+import Home from "./components/home";
 
 (() => {
   // * add favicon logo
@@ -14,7 +15,16 @@ import changeFavicon from "./changeFavicon";
 
   const element = document.createElement("div");
   element.classList.add("content");
-  element.setAttribute("id", "content");
+
+  // * static header
   element.appendChild(Header());
+
+  // * dynamic content
+  const dynamicContent = document.createElement("div");
+  dynamicContent.classList.add("dynamic-content");
+  element.appendChild(dynamicContent);
+
+  dynamicContent.appendChild(Home());
+
   document.body.appendChild(element);
 })();

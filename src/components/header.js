@@ -9,15 +9,9 @@ export default function header() {
     <img src="${Logo}" alt="restaurant logo"/>
   </div>
   <ul class="header__nav">
-    <li class="nav__item">
-        <a class="nav__link" href="#">Home</a>
-    </li>
-    <li class="nav__item">
-        <a class="nav__link" href="#">Menu</a>
-    </li>
-    <li class="nav__item">
-        <a class="nav__link" href="#">Contact Us</a>
-    </li>
+    <li class="nav__item active">Home</li>
+    <li class="nav__item">Menu</li>
+    <li class="nav__item">Contact Us</li>
   </ul>
   `;
 

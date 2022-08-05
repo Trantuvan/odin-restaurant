@@ -25,7 +25,6 @@
 html {
   font-size: 62.5%;
   font-family: "Barlow", sans-serif;
-  /* font-family: 'Fraunces', serif; */
   line-height: 1.4;
 }
 
@@ -42,23 +41,85 @@ img {
 
 .content {
   width: min(144rem, 100%);
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas:
+    "header"
+    "content";
 }
 
+/* header */
 header {
+  grid-area: header;
   background-color: var(--darker-blue-clr);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2em 8em;
 }
 
-header > .header__nav {
+.header__nav {
   display: flex;
   align-items: center;
   gap: 2em;
+  font-family: "Fraunces", serif;
 }
 
-header .nav__link {
-  text-decoration: none;
+.nav__item {
   color: var(--white-clr);
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  padding: 0.2em 1em;
+}
+
+.nav__item:hover,
+.nav__item:focus {
+  color: var(--dark-cyan-clr);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+/* body */
+.dynamic-content {
+  grid-area: "content";
+}
+
+/* Home */
+.hero-container {
+  min-height: 89vh;
+  color: var(--white-clr);
+  background-color: var(--dark-gray-blue-clr);
+  background-image: url("../img/hero-bg-medium.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 10em 8em;
+}
+
+.hero__title {
+  font-family: "Fraunces", serif;
+  font-size: 6.4rem;
+}
+
+.hero__text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 3em;
+}
+
+.btn {
+  color: var(--white-clr);
+  font-size: 1.8rem;
+  border-radius: 4px;
+  border: 2px solid var(--white-clr);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--darker-blue-clr);
+  background-color: var(--white-clr);
+}
+
+/* utilities */
+.active {
+  color: var(--dark-cyan-clr);
 }
