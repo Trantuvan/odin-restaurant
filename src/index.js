@@ -6,6 +6,7 @@ import Favicon from "./assets/img/favicon.png";
 
 // Feature
 import changeFavicon from "./util/changeFavicon";
+import Events from "./util/events";
 import Header from "./components/header";
 import Home from "./components/home";
 import Menu from "./components/menu";
