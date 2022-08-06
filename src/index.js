@@ -8,6 +8,7 @@ import Favicon from "./assets/img/favicon.png";
 import changeFavicon from "./util/changeFavicon";
 import Header from "./components/header";
 import Home from "./components/home";
+import Menu from "./components/menu";
 
 (() => {
   // * add favicon logo
@@ -24,7 +25,13 @@ import Home from "./components/home";
   dynamicContent.classList.add("dynamic-content");
   element.appendChild(dynamicContent);
 
+  // * default content to Home page
   dynamicContent.appendChild(Home());
+
+  // *get old child in dynamic-content
+  const oldChild = dynamicContent.firstElementChild;
+  // *replace dynamic content child
+  dynamicContent.replaceChild(Menu(), oldChild);
 
   document.body.appendChild(element);
 })();

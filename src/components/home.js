@@ -1,6 +1,6 @@
 import "../assets/css/style.css";
 
-export default function Home() {
+export default function home() {
   const home = document.createElement("div");
   home.classList.add("home");
   home.innerHTML = `
