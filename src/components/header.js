@@ -23,7 +23,7 @@ export default function header() {
 
   const navList = Array.from(header.querySelectorAll(".nav__item"));
   navList.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (evt) => {
       //* emit change tab event
       events.emit("changeTab", evt.target);
     });
