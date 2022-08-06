@@ -6,10 +6,8 @@ import Favicon from "./assets/img/favicon.png";
 
 // Feature
 import changeFavicon from "./util/changeFavicon";
-import Events from "./util/events";
 import Header from "./components/header";
-import Home from "./components/home";
-import Menu from "./components/menu";
+import DynamicContent from "./components/dynamicContent";
 
 (() => {
   // * add favicon logo
@@ -22,17 +20,13 @@ import Menu from "./components/menu";
   element.appendChild(Header());
 
   // * dynamic content
-  const dynamicContent = document.createElement("div");
-  dynamicContent.classList.add("dynamic-content");
-  element.appendChild(dynamicContent);
+  element.appendChild(DynamicContent());
+  // const dynamicContent = document.createElement("div");
+  // dynamicContent.classList.add("dynamic-content");
+  // element.appendChild(dynamicContent);
 
-  // * default content to Home page
-  dynamicContent.appendChild(Home());
-
-  // *get old child in dynamic-content
-  const oldChild = dynamicContent.firstElementChild;
-  // *replace dynamic content child
-  dynamicContent.replaceChild(Menu(), oldChild);
+  // // * default content to Home page
+  // dynamicContent.appendChild(Home());
 
   document.body.appendChild(element);
 })();

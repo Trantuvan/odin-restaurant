@@ -18,7 +18,7 @@ export default function header() {
   </ul>
   `;
 
-  //* sub to changeTab events
+  //* on to changeTab events to change nav__item status
   events.on("changeTab", setActive);
 
   const navList = Array.from(header.querySelectorAll(".nav__item"));

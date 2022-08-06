@@ -80,7 +80,7 @@ header {
 
 /* body */
 .dynamic-content {
-  grid-area: "content";
+  grid-area: content;
 }
 
 /* Home */
