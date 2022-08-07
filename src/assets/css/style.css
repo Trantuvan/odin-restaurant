@@ -189,6 +189,60 @@ header {
   width: min(20rem, 100%);
 }
 
+/* Contact */
+.contact {
+  background-color: var(--yellow-clr);
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas:
+    "title"
+    "contact";
+}
+
+.contact__title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fraunces", serif;
+  font-size: 5rem;
+  color: var(--dark-cyan-clr);
+}
+
+.contact__wrapper {
+  grid-area: contact;
+  width: min(120rem, 100%);
+  margin: 0 auto 6rem;
+  background-color: var(--soft-red-clr);
+  border-radius: 8px;
+  padding: 6em 8em;
+  display: grid;
+  justify-items: end;
+  grid-template-columns: 1fr 2fr;
+}
+
+.contact__info {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(6rem, 1fr));
+}
+
+.contact__info > * {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.info__phone,
+.info__hours,
+.info__address {
+  font-size: 1.8rem;
+}
+
+.info__icon,
+.info__icon > img {
+  width: min(3rem, 100%);
+}
+
 /* utilities */
 .active {
   color: var(--dark-cyan-clr);
