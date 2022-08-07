@@ -212,6 +212,7 @@ header {
 .contact__wrapper {
   grid-area: contact;
   width: min(120rem, 100%);
+  min-height: 74vh;
   margin: 0 auto 6rem;
   background-color: var(--soft-red-clr);
   border-radius: 8px;
