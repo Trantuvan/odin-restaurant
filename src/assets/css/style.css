@@ -191,6 +191,7 @@ header {
 
 /* Contact */
 .contact {
+  min-height: 90vh;
   background-color: var(--yellow-clr);
   display: grid;
   grid-template-rows: 1fr 8fr;
@@ -212,7 +213,6 @@ header {
 .contact__wrapper {
   grid-area: contact;
   width: min(120rem, 100%);
-  min-height: 74vh;
   margin: 0 auto 6rem;
   background-color: var(--soft-red-clr);
   border-radius: 8px;
