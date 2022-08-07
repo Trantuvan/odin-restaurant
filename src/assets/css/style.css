@@ -6,8 +6,9 @@
 
 :root {
   /* primary color */
-  --soft-red-clr: #fe7867;
-  --yellow-clr: #fad400;
+  --soft-red-clr: #ffc5b0;
+  --light-red-clr: #e62e16;
+  --yellow-clr: #fff6da;
   --dark-cyan-txt: #25564b;
   --dark-blue-clr: #19536b;
   --dark-cyan-clr: #458c7e;
@@ -117,6 +118,75 @@ header {
 .btn:focus {
   color: var(--darker-blue-clr);
   background-color: var(--white-clr);
+}
+/* Menu */
+.menu {
+  background-color: var(--yellow-clr);
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas:
+    "title"
+    "menu";
+}
+
+.menu__title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fraunces", serif;
+  font-size: 5rem;
+  color: var(--dark-cyan-clr);
+}
+
+.menu__title > img {
+  width: min(5rem, 100%);
+}
+
+.menu__wrapper {
+  grid-area: menu;
+  width: min(120rem, 100%);
+  margin: 0 auto 6rem;
+  background-color: var(--soft-red-clr);
+  border-radius: 8px;
+  padding: 6em;
+  display: grid;
+  gap: 6em;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+}
+
+.menu__item {
+  display: flex;
+  gap: 1em;
+}
+
+.menu__text {
+  padding-top: 4em;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+
+.menu__dish {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+}
+
+.menu__dish > span {
+  font-size: 1.4rem;
+  color: var(--light-red-clr);
+  margin-left: 1em;
+  font-style: italic;
+}
+
+.menu__description {
+  font-size: 1.8rem;
+  width: min(30rem, 100%);
+}
+
+.menu__img,
+.menu__img > img {
+  width: min(20rem, 100%);
 }
 
 /* utilities */

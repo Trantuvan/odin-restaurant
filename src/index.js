@@ -21,12 +21,6 @@ import DynamicContent from "./components/dynamicContent";
 
   // * dynamic content
   element.appendChild(DynamicContent());
-  // const dynamicContent = document.createElement("div");
-  // dynamicContent.classList.add("dynamic-content");
-  // element.appendChild(dynamicContent);
-
-  // // * default content to Home page
-  // dynamicContent.appendChild(Home());
 
   document.body.appendChild(element);
 })();
